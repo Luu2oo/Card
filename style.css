@@ -8,17 +8,22 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .container {
   display: flex;
   flex-wrap: wrap;
+  width: 90vw;
   gap: 10px;
-  width: 440px;
+  max-width: 440px;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
+  width: 22vw;
+  max-width: 100px;
+  height: 22vw;
+  max-height: 100px;
   perspective: 800px; /* 3D視角，決定翻轉深度 */
 }
 
@@ -68,4 +73,13 @@ button{
     border: 1px solid rgb(184, 235, 255);
     color:rgb(13, 89, 120);
     font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 45vw;
+    height: 45vw;
+    max-width: none;
+    max-height: none;
+  }
 }
